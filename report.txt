@@ -1,0 +1,11 @@
+StudentID: b06505027
+
+Clock period: 5.5(ns)
+
+Area : 148306.270837 (um2)
+
+Latency:
+    tb0:  (cycle)
+    tb1:  (cycle)
+    tb2:  (cycle)
+

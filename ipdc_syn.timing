@@ -1,0 +1,66 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ipdc
+Version: N-2017.09-SP2
+Date   : Mon Nov 16 16:49:31 2020
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: tmp_1_reg[8][1]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: tmp_1_reg[8][4]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ipdc               tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  tmp_1_reg[8][1]/CK (DFFQX1)              0.00       0.50 r
+  tmp_1_reg[8][1]/Q (DFFQX1)               0.33       0.83 f
+  U2269/Y (BUFX6)                          0.18       1.01 f
+  sort_row3/c[1] (median_5)                0.00       1.01 f
+  sort_row3/U363/Y (CLKBUFX3)              0.45       1.45 f
+  sort_row3/U22/Y (INVX3)                  0.37       1.82 r
+  sort_row3/U178/Y (AO21X1)                0.31       2.13 r
+  sort_row3/U499/Y (OAI211X1)              0.19       2.32 f
+  sort_row3/U500/Y (AOI31X1)               0.33       2.65 r
+  sort_row3/U505/Y (AOI211X1)              0.22       2.87 f
+  sort_row3/U57/Y (NOR3BXL)                0.53       3.40 r
+  sort_row3/U166/Y (INVX1)                 0.21       3.60 f
+  sort_row3/U508/Y (AOI31X1)               0.42       4.03 r
+  sort_row3/U411/Y (NOR2X1)                0.20       4.23 f
+  sort_row3/U410/Y (OAI211X4)              0.45       4.68 r
+  sort_row3/U315/Y (OAI222XL)              0.35       5.03 f
+  sort_row3/max[4] (median_5)              0.00       5.03 f
+  U1804/Y (AOI22X1)                        0.36       5.39 r
+  U2693/Y (OAI211X1)                       0.22       5.61 f
+  tmp_1_reg[8][4]/D (DFFQX1)               0.00       5.61 f
+  data arrival time                                   5.61
+
+  clock i_clk (rise edge)                  5.50       5.50
+  clock network delay (ideal)              0.50       6.00
+  clock uncertainty                       -0.10       5.90
+  tmp_1_reg[8][4]/CK (DFFQX1)              0.00       5.90 r
+  library setup time                      -0.29       5.61
+  data required time                                  5.61
+  -----------------------------------------------------------
+  data required time                                  5.61
+  data arrival time                                  -5.61
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
